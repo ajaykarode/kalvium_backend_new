@@ -1,0 +1,8 @@
+{"userQuery":"3+5","calculatedResult":8}
+{"userQuery":"3-5","calculatedResult":-2}
+{"userQuery":"3*5","calculatedResult":15}
+{"userQuery":"3%5","calculatedResult":3}
+{"userQuery":"3*5+8*6","calculatedResult":63}
+{"userQuery":"7*5-8*2","calculatedResult":19}
+{"userQuery":"7*5-8*2-5*9","calculatedResult":-26}
+{"userQuery":"18-12+10*2","calculatedResult":26}
