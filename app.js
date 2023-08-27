@@ -9,8 +9,22 @@ app.use(express.urlencoded({ extended: true }));
 let log = [];
 
 
+app.get("/history", (req, res) => {
+    fs.readFile("historyData.txt", "utf8", (error, content) => {
+      if (error) {
+        console.error("Error while reading history data: ", error);
+        res.status(500).json({ error: "Internal server error" });
+      } else {
+        const newLine = content.trim().split("\n");
+        const parsedLogData = newLine.map((line) => JSON.parse(line));
+  
+        const last20entries = parsedLogData.slice(0, 20);
+        res.json(last20entries);
+      }
+    });
+  });
 
-
+  
 app.get("/*", (req, res) => {
   const expr = req.originalUrl;
   const urlParam = expr
@@ -49,20 +63,7 @@ app.get("/*", (req, res) => {
   }
 });
 
-app.get("/history", (req, res) => {
-  fs.readFile("historyData.txt", "utf8", (error, content) => {
-    if (error) {
-      console.error("Error while reading history data: ", error);
-      res.status(500).json({ error: "Internal server error" });
-    } else {
-      const newLine = content.trim().split("\n");
-      const parsedLogData = newLine.map((line) => JSON.parse(line));
 
-      const last20entries = parsedLogData.slice(0, 20);
-      res.json(last20entries);
-    }
-  });
-});
 
 module.exports = app;
 

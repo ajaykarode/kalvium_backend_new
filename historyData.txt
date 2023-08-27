@@ -6,3 +6,16 @@
 {"userQuery":"7*5-8*2","calculatedResult":19}
 {"userQuery":"7*5-8*2-5*9","calculatedResult":-26}
 {"userQuery":"18-12+10*2","calculatedResult":26}
+{"userQuery":"18-12+10*2","calculatedResult":26}
+{"userQuery":"18-12+21+3*2","calculatedResult":33}
+{"userQuery":"20*10%12","calculatedResult":8}
+{"userQuery":"20*10+21-34*12","calculatedResult":-187}
+{"userQuery":"21*14-16*9","calculatedResult":150}
+{"userQuery":"21*23-2","calculatedResult":481}
+{"userQuery":"12-32-26","calculatedResult":-46}
+{"userQuery":"12-45-26","calculatedResult":-59}
+{"userQuery":"12-45-12","calculatedResult":-45}
+{"userQuery":"12+45-12","calculatedResult":45}
+{"userQuery":"12+12*12","calculatedResult":156}
+{"userQuery":"12+12*10","calculatedResult":132}
+{"userQuery":"12-12*2","calculatedResult":-12}
